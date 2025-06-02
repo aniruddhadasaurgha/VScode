@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors Example</title>
+
+    <!-- Internal CSS -->
+
+    <style>
+        /* Element Selector */
+
+        h1 {
+
+            color: darkblue;
+
+            text-align: center;
+
+        }
+
+        /* Class Selector */
+
+        .highlight {
+
+            background-color: yellow;
+
+            padding: 5px;
+
+        }
+
+        /* ID Selector */
+
+        #unique {
+
+            font-weight: bold;
+
+            font-size: 1.2em;
+
+        }
+
+        /* Group Selector */
+
+        h2,
+        p {
+
+            color: darkgreen;
+
+        }
+
+        /* Universal Selector */
+
+        * {
+
+            font-family: Arial, sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Inline CSS -->
+
+    <h1 style="color: darkred;">Welcome to CSS Selectors</h1>
+
+    <p class="highlight">This paragraph uses a class selector to apply styles.</p>
+
+    <p id="unique">This paragraph uses an ID selector for unique styling.</p>
+
+    <h2>Grouped Selectors</h2>
+
+    <p>This paragraph and the heading above share the same style due to the group selector.</p>
+
+    <p>All text on this page uses the universal selector for consistent font styling.</p>
+
+    <!-- External CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</body>
+
+</html>
+       
