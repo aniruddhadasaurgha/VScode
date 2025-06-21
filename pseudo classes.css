@@ -1,0 +1,24 @@
+body {
+    background-color: #070557;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #067ee0;
+    text-align: center;
+}
+p {
+    color: #e5ede9;
+    font-size: 16px;
+    line-height: 1.5;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    color: #04662b;
+    text-decoration: underline;
+}
+ul > li {
+    color: green;
+}
