@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Example</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 500px;
+            background-color: lightblue;
+            border: 20px solid blue;
+            padding: 70px;
+            margin: 30px;
+        }
+        body {
+            background-color: lightgray;
+            font-family: monospace, sans-serif;
+        }
+        .info {
+            margin-top: 50px;
+            font-size: 24px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model Example</h1>
+    <div class="box">
+    <h2>The Box Model is a core concept in CSS (Cascading Style Sheets) used to describe how elements are structured and
+    displayed on a web page.
+    
+    Each HTML element is considered a rectangular box, and the Box Model breaks it down into four parts from the inside out:</h2>
+    <ul>
+        <div>
+        <li>1.Content</li>
+        <li>This is where the text or images of the element appear.</li>
+        <li>Width and height properties directly affect this area.</li>
+        </div>
+        <div>
+        <li>2.Padding</li>
+        <li>This is the space between the content and the border.</li>
+        <li>Padding can be set using the padding property.</li>
+        </div>
+        <div>   
+        <li>3.Border</li>
+        <li>This is a line that wraps around the padding (if any) and content.</li>
+        <li>Border properties can be set using the border property.</li>
+        </div>  
+        <div>
+        <li>4.Margin</li>
+        <li>This is the space outside the border, separating the element from others.</li>
+        <li>Margins can be set using the margin property.</li>
+        </div>
+    </ul>
+    </div>
+    <div class="info">
+        <p>The box has a width of 3000px, height of 1000px, padding of 20px, border of 5px, and margin of 30px.</p>
+    </div>
+
+</html>
