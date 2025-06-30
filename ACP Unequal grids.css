@@ -1,0 +1,10 @@
+.unequal-grids {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(186, 49, 11, 0.991);
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    font-weight: italic;
+    border: 8px solid gray;
+}
