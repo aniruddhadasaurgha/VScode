@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography in Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ACP Bootstrap Typography.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Typography in Bootstrap</h1><br>
+        <h2>Bootstrap provides a powerful set of typography utilities and styles that help you create <mark>attractive</mark>, readable, and
+        consistent text across your web pages. Here’s a quick guide to the key aspects:</h2><br>
+        <h2>1. Headings</h2>
+        <p>Bootstrap styles all HTML heading tags (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>) with specific sizes and margins.</p>
+        <h3>Example:</h3>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>  
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <br>
+        <h2>2. Paragraphs</h2>
+        <p>Paragraphs are styled with a default font size and line height for readability. You can also use the <code>.lead</code> class to create
+        larger, more prominent paragraphs.</p>  
+        <p class="lead">This is a lead paragraph. It stands out from the regular text.</p>
+        <p>This is a regular paragraph. It has a standard font size and line height.</p>
+        <br>        
+        <h2>3. Text Utilities</h2>
+        <p>Bootstrap provides various text utility classes to control text alignment, color, and decoration.</p>
+        <h3>Text Alignment:</h3>
+        <p class="text-left">This text is aligned to the left.</p>
+        <p class="text-center">This text is centered.</p>
+        <p class="text-right">This text is aligned to the right.</p>
+        <h3>Text Color:</h3>
+        <p class="text-primary">This text is primary color.</p>
+        <p class="text-secondary">This text is secondary color.</p>
+        <p class="text-success">This text indicates success.</p>
+        <p class="text-danger">This text indicates danger.</p>
+        <p class="text-warning">This text indicates a warning.</p>
+        <p class="text-info">This text provides additional information.</p> 
+        <p class="text-light bg-dark">This text is light on a dark background.</p>
+        <p class="text-dark bg-light">This text is dark on a light background.</p>
+        <p class="text-muted">This text is muted.</p>
+        <p class="text-white bg-dark">This text is white on a dark background.</p>
+        <h3>Text Decoration:</h3>
+        <p class="text-decoration-underline">This text is underlined.</p>
+        <p class="text-decoration-none">This text has no decoration.</p>
+        <br>
+        <h2>4. Font Weight and Style</h2>
+        <p>Bootstrap allows you to control font weight and style using utility classes.</p>
+        <p class="font-weight-bold">This text is bold.</p>
+        <p class="font-weight-normal">This text is normal weight.</p>
+        <p class="font-italic">This text is italicized.</p>
+        <p class="font-weight-light">This text is light weight.</p>
+        <p class="font-weight-lighter">This text is lighter than normal.</p>
+        <p class="font-weight-bolder">This text is bolder than normal.</p>
+        <br>
+        <h2>5. Text Transformations</h2>
+        <p>Bootstrap provides classes to transform text to uppercase, lowercase, or capitalize.</p>
+        <p class="text-uppercase">This text is uppercase.</p>
+        <p class="text-lowercase">This text is lowercase.</p>
+        <p class="text-capitalize">This text is capitalized.</p>
+        <br>
+        <h2>6. Line Height and Spacing</h2>
+        <p>Bootstrap allows you to control line height and spacing between elements.</p>
+        <p class="mb-3">This paragraph has a bottom margin of 3.</p>
+        <p class="mt-3">This paragraph has a top margin of 3.</p>
+        <p class="mb-5">This paragraph has a bottom margin of 5.</p>
+        <p class="mt-5">This paragraph has a top margin of 5.</p>
+        <p class="lh-1">This paragraph has a line height of 1.</p>
+        <p class="lh-sm">This paragraph has a small line height.</p>
+        <p class="lh-base">This paragraph has a base line height.</p>
+        <p class="lh-lg">This paragraph has a large line height.</p>
+        <br>
+        <h2>7. Responsive Typography</h2>
+        <p>Bootstrap's typography is responsive by default, meaning it adjusts to different screen sizes. You can also use responsive font size classes.</p>
+        <p class="fs-1">This is a large font size.</p>
+        <p class="fs-2">This is a slightly smaller font size.</p>
+        <p class="fs-3">This is a medium font size.</p>
+        <p class="fs-4">This is a smaller font size.</p>
+        <p class="fs-5">This is an even smaller font size.</p>
+        <p class="fs-6">This is the smallest font size.</p>
+        <br>
+        <h2>8. Blockquotes</h2>
+        <p>Bootstrap provides a styled blockquote for quoting text.</p>
+        <blockquote class="blockquote">
+            <p class="mb-0">This is a blockquote. It is used to highlight a section of text.</p>
+            <footer class="blockquote
+                text-right">— Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+        <br>
+        <h2>9. Lists</h2>
+        <p>Bootstrap styles ordered and unordered lists with specific margins and padding.</p>
+        <h3>Unordered List:</h3>
+        <ul class="list-unstyled">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <h3>Ordered List:</h3>
+        <ol class="list-unstyled">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+        <br>
+        <h2>10. Code and Preformatted Text</h2>
+        <p>Bootstrap provides styles for inline code and preformatted text.</p>
+        <p>Inline code: <code>console.log('Hello, World!');</code></p>
+        <code>function greet() {   
+    console.log('Hello, World!');
+}</code>
+        <br>
+        <h2>Conclusion</h2>
+        <p>Bootstrap's typography utilities make it easy to create well-structured, readable, and visually appealing text on your web pages. By using the provided classes and styles, you can ensure consistency and enhance the user experience.</p><br>
+        <p>Use <kbd>ctrl+c</kbd>to copy the whole text after selecting the whole text.</p>
+    </div>              
+       
+    </body>
+</html>
