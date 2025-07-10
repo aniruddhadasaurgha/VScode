@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: math,sans-serif;
+    font-size: 16px;
+    text-shadow: 1px 3px 1px rgb(76, 78, 144);
+   
+}
+.container-fluid {
+    color: white;
+    border: 5px solid white;
+    font-family: math;
+}
+.row {
+    color: white;
+        border: 3px solid white;
+        font-family: math;
+}
+.col {
+    color: white;
+    border: 3px solid white;
+    font-family: math;
+}
+h1 {
+    color: white;
+    font-family: math;
+    font-weight: bold;
+}
