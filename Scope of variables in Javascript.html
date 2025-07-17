@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 19: Scope of Variables in JavaScript</title>
+</head>
+<body>  
+    <script>
+        let y;
+        function myfunction(a,b) {let x=10;
+            if (y=== undefined) {
+                y = 5;
+            }
+            document.write(a+b);
+
+        }
+        myfunction(3, 4);
+        document.write('<br>');      document.write(y+'<br>');      document.write(x+'<br>');     
+    </script>
+</html>
