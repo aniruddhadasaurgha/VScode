@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let word = "Hello, World!";
+            document.write(word.endsWith("e")+"<br>");
+            document.write(word.length + "<br>");
+            document.write(word.indexOf("l") + "<br>");
+            document.write(word.replace("l","y" ) + "<br>");
+            document.write(word.toUpperCase() + "<br>");
+
+            let str = "Codingal";
+            let pattern = new RegExp("Codingal");
+            let result =pattern.test(str);
+            document.write(result + "<br>");
+        </script>
+    </body>
+</html>
