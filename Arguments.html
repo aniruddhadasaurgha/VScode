@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 21: Arguments</title>
+</head>
+
+
+<body>
+    <script>
+        function findMax() {
+            var max= 0;
+            for(let i=0; i < arguments.length; i++) {
+                if(arguments[i] > max) {
+                    max = arguments[i];     
+                }
+            }
+            return max;
+        }
+        document.write("Maximum value is: " + findMax(1,5,10,20,24,30,38,60,40,18,78,576) + "<br>");
+       
+    </script>
+</body>
+
+</html>

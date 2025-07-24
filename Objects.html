@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 21: Objects</title>
+    </head>
+<body>
+    <script>
+        let student = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 20,
+            isEmployed: false,
+            isEnrolled: true,
+            subjects: ["Math", "Science", "History"],
+            department: 
+                "Science",
+                introduce() {
+                    document.write("Hello, my name is " + this.firstName + " " + this.lastName + ". I am " + this.age + " years old.<br>");
+                }
+        }
+        student.introduce();
+        document.write("Subjects: " + student.subjects.join(", ") + "<br>");
+        document.write("Department: " + student.department + "<br>");
+        document.write("Employed: " + student.isEmployed + "<br>");
+            
+
+
+            
+    </script>
+</body>
+
+        
+</html>
