@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <head>
+
+    <body>
+        <script>
+            function printArray(arr, index = 0) {
+                if (index >= arr.length)
+                return;
+            document.write(`Element at index ${index} is: ${arr[index]}<br>`);
+            printArray(arr, index + 1);
+            }
+            
+            const numbers = [10, 20, 30, 40, 50];
+            printArray(numbers);
+
+        </script>
+
+    </body>
+</head>
+
+</html>
