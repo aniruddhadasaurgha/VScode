@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Methods, Loops, and Switches in JavaScript</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        
+        <style>
+            body {
+                font-family: math,sans-serif;
+                background-color: black;
+                color: rgb(4, 232, 4);
+                border: 1px solid white;
+            }
+            h1 {
+                text-align: center;
+                color:skyblue;
+                box-shadow: none;
+            }
+            h2 ,h3 ,h4 ,h5 ,h6{
+                text-align: center;
+                color:white;
+            }
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                padding: 20px;
+                background: rgb(31, 31, 32);
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(172, 175, 176, 0.744);
+            
+            }
+            p {
+                text-align: center;
+                color: rgb(4, 232, 4); ;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Methods,Loops and Switches in Javascript</h1>
+            </div>
+            <h2>JavaScript is a powerful programming language commonly used in web development. To write efficient and dynamic code,
+            it’s important to understand three key building blocks: methods, loops, and switch statements. Let’s explore each of
+            them in detail.</h2>
+
+            <p></p>
+            <div class="container">
+                <h2>HTML Lists Example</h2>
+                
+                <ul>
+                    <li></li>Method: A method is simply a function that belongs to an object. JavaScript provides many built-in methods, and you can also
+                    define custom methods inside your own objects.
+                    <li>Loops: Loops allow you to execute a block of code repeatedly, making them useful for handling repetitive tasks, such as working
+                    with arrays or performing calculations.</li>
+                    <li>Switch: A switch statement provides a clean way to execute different blocks of code based on multiple conditions—similar to
+                    if...else if but more readable for certain use cases.</li>
+                </ul>
+                
+              
+
+            <div class="container">
+                <h2>JavaScript Code Example</h2>
+            <script>
+                let word ="JavaScript is fun!";
+                document.write("<h2>String Methods</h2>");
+                document.write("Does the string end with 'fun'? " + word.endsWith("fun!") + "<br>");
+                document.write("Length of the string: " + word.length + "<br>");
+                document.write("Index of 'S': " + word.indexOf("S") + "<br>");
+                document.write("String after replacing 'fun' with 'awesome': " + word.replace("fun", "awesome") + "<br>");
+                document.write("String in uppercase: " + word.toUpperCase() + "<br>");  
+                </script>
+                </div>
+            <div class="container">
+                <h2>Loops and Switch Example</h2>
+                <script>
+                document.write("<h4>Loops and Switch Statements</h4>");
+                let str = "VSCode";
+                let pattern = new RegExp("VSCode");
+                let result = pattern.test(str); 
+                document.write("Does the string match the pattern 'VSCode'? " + result + "<br>");
+</script>
+</div>
+<div class="container">
+            <script>
+                for(let i = 0; i < 48; i++) {
+                    document.write("Loop iteration: " + i + "<br>");
+                    
+                }
+                </script>
+                <div class="container">
+                <h2>Switch Statement Example</h2>
+                <script>
+                document.write("<h4>Switch Statement</h4>");
+                let date = new Date();
+                let day;
+                switch(date.getDay()) {
+                    case 0:
+                        day = "Sunday";
+                        break;
+                    case 1:
+                        day = "Monday";
+                        break;
+                    case 2:
+                        day = "Tuesday";
+                        break;
+                    case 3:
+                        day = "Wednesday";
+                        break;
+                    case 4:
+                        day = "Thursday";
+                        break;
+                    case 5:
+                        day = "Friday";
+                        break;
+                    case 6:
+                        day = "Saturday";
+                        break;
+                }
+                document.write("Today is: " + day + "<br>");
+                </script>
+                </div>
+                <div class="container">
+                <h2>Conditional Statements Based on Time</h2>
+                <script>
+                document.write("<h4>Conditional Statements Based on Time</h4>");
+
+                let time = new Date();
+                let hours = time.getHours();
+                document.write("Current Hour: " + hours + "<br>");
+                if (hours < 12) {
+                    document.write("Good Morning!<br>");
+                } else if (hours < 18) {
+                    document.write("Good Afternoon!<br>");
+                } else {
+                    document.write("Good Evening!<br>");
+                } 
+                </script>
+                </div>
+                <div class="container">
+                <script>
+                document.write("<h2>Minutes and Seconds Check</h2>");
+                
+                let minutes = time.getMinutes();
+                document.write("Current Minutes: " + minutes + "<br>");
+                if (minutes < 30) { 
+                    document.write("First Half of the Hour!<br>");
+                } else {
+                    document.write("Second Half of the Hour!<br>");
+                }
+                let seconds = time.getSeconds();
+                document.write("Current Seconds: " + seconds + "<br>");
+                if (seconds < 30) {
+                    document.write("First Half of the Minute!<br>");
+                } else {
+                    document.write("Second Half of the Minute!<br>");
+                }
+
+            </script>
+</div>
+    </body>
+</html>
