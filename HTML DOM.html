@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1 id="one">HTML DOM</h1>
+    <p class="para">This is a welcome page</p>
+    <p class="para">This is a second paragraph</p>
+    <p class="para">This is a third paragraph</p>
+    <script>
+        let text= document.getElementById("one").innerHTML;
+        alert("Heading text is: " + text);
+        document.getElementsByClassName("para");
+        document.querySelectorAll("#one");
+
+    </script>
+</body>
+
+</html>
