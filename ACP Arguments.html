@@ -61,9 +61,9 @@
                         document.write("Value of Sine is : " + Math.sin(radians) + "<br>");
                         document.write("Value of Cosine is  " + Math.cos(radians) + "<br>");
                         document.write("Value of Tangent is  " + Math.ceil(Math.tan(radians)) + "<br>");
-                        document.write("Value of Cosecant is  " + (1 / Math.sin(radians)) + "<br>");
+                        document.write("Value of Cosecant is  " + undefined + "<br>");
                         document.write("Value of Secant is  " + (1 / Math.cos(radians)) + "<br>");
-                        document.write("Value of Cotangent is  " + (1 / Math.tan(radians)) + "<br>");
+                        document.write("Value of Cotangent is  " + undefined + "<br>");
 
                     </script>
             </div>
@@ -117,17 +117,18 @@
                 <div class="col">
                     <p>Calculating trigonometric ratios for 90 degrees.</p>
                     <script>
-
-                        degrees = 90;
-                        radians = degrees * (Math.PI / 180);
-                        document.write("Value of Sine is : " + Math.sin(radians) + "<br>");
-                        document.write("Value of Cosine is  " + Math.cos(radians) + "<br>");
-                        document.write("Value of Tangent is  " + Math.ceil(Math.tan(radians)) + "<br>");
-                        document.write("Value of Cosecant is  " + (1 / Math.sin(radians)) + "<br>");
-                        document.write("Value of Secant is  " + (1 / Math.cos(radians)) + "<br>");
-                        document.write("Value of Cotangent is  " + (1 / Math.tan(radians)) + "<br>");
-
+                    degrees = 90;
+                    radians = (Math.PI / 2);
+                    document.write("Value of Sine is : " + Math.sin(radians) + "<br>");
+                    document.write("Value of Cosine is " + 0 + "<br>");
+                    document.write("Value of Tangent is " + undefined + "<br>");
+                    document.write("Value of Cosecant is " + (1 / Math.sin(radians)) + "<br>");
+                    document.write("Value of Secant is " + undefined + "<br>");
+                    document.write("Value of Cotangent is " + 0 + "<br>");
+                    
                     </script>
+
+                       
                 </div>
             </div>
 
