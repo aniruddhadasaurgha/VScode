@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <p>Click on the following button to get a time-based greeting.</p>
+    <button onclick="greeting()">Greetings</button>
+    <p id="time"></p>
+    <p id="greeting"></p>
+    <script>
+        let greetings;
+        let date = new Date();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let second = date.getSeconds();
+        let time = hour + ":" + minute + ":" + second;
+        document.getElementById("time").innerHTML = time;
+        function greeting(){
+            if (hour < 12) {
+                greetings = "Good morning!";
+            } else if (hour < 18) {
+                greetings = "Good afternoon!";
+            } else {
+                greetings = "Good evening!";
+            }
+            document.getElementById("greeting").innerHTML = greetings; 
+        }
+    </script>
+
+
+</body>
+
+</html>
