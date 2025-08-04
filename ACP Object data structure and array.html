@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data structure and Array</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <style>
+        body {
+            font-family: math, sans-serif;
+            margin: 20px;
+            background-color: #3786d4;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
+            line-height: 1.6;
+            font-size: 20px;
+            background-image: linear-gradient(to right, #3786d4, #1e5a8c);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            
+        }
+        h1 {
+            color: #020d60;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Object data structure and Array</h1>
+<p id ="join"></p><br>
+<p id="pop"></p><br>
+<p id="secondPop"></p><br>
+<script>
+    let apps = ["Facebook", "Instagram", "Twitter", "LinkedIn", "Camscanner",
+                "WhatsApp", "Telegram", "YouTube", "TikTok"];
+    document.getElementById("join").innerHTML = "The list of apps are :" + apps.join(" , ");
+    document.getElementById("pop").innerHTML = "The last element is: "+ apps.pop();
+    document.getElementById("secondPop").innerHTML = "The second last element is: " + apps.pop();
+    document.write("Current list of apps after popping" + apps + "<br>");
+    apps.push("Discord");
+    apps.push("Pinterest");
+    document.write("New list of apps is:" + apps + "<br>");
+    apps.unshift("Reddit");
+    document.write(apps + "<br>");
+    apps.shift();
+    document.write(apps + "<br>");
+    document.write("The length of the array is: " + apps.length + "<br>");
+    document.write("List of apps:<br>");
+    // Loop through the array and display each app
+    for (let i = 0; i < apps.length; i++) {
+            document.write((i + 1) + ". The value is " + apps[i] + "<br>");
+        }
+</script>
+    
+
+</body>
+
+</html>
