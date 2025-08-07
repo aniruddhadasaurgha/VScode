@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <script>
+         let text = document.getElementById("one").innerHTML;
+            alert("Heading text is: " + text);
+            document.getElementsByClassName("para");
+            document.querySelectorAll("#one");
+    </script>
+    <h1 id="one">HTML DOM</h1>
+    <div class="container">
+        <script>
+        let i = 0;
+        let text = "";
+        while(i <= 24){
+            text += "The number is " + i + "<br>";
+            i++;
+        }
+        document.write(text);
+        let heading = document.createElement("h1");
+        heading.innerHTML = "Numbers from 0 to 24";
+        document.body.insertBefore(heading, document.body.firstChild);
+        let para = document.createElement("p");
+        para.innerHTML = "This is a paragraph added before the numbers.";
+        document.body.insertBefore(para, document.body.firstChild.nextSibling);
+        let list = document.createElement("ul");
+        for(let j = 0; j <= 24; j++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = "Number: " + j;
+            list.appendChild(listItem);
+        }
+        document.body.appendChild(list);
+        let footer = document.createElement("footer");
+        footer.innerHTML = "This is a footer added at the end of the document.";
+        document.body.appendChild(footer);
+        let lastPara = document.createElement("p");
+        lastPara.innerHTML = "This is the last paragraph of the document.";
+        document.body.appendChild(lastPara);
+        let lastHeading = document.createElement("h2");
+        lastHeading.innerHTML = "End of Document";
+        document.body.appendChild(lastHeading);
+        let lastList = document.createElement("ol");
+        for(let k = 0; k <= 24; k++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = "Ordered Number: " + k;
+            lastList.appendChild(listItem);
+        }
+        document.body.appendChild(lastList);
+        let lastFooter = document.createElement("footer");
+        lastFooter.innerHTML = "This is the final footer of the document.";
+        document.body.appendChild(lastFooter);
+        let lastPara2 = document.createElement("p");
+        lastPara2.innerHTML = "This is another paragraph added at the end.";
+        document.body.appendChild(lastPara2);
+        let lastHeading2 = document.createElement("h3");
+        lastHeading2.innerHTML = "Conclusion";
+        document.body.appendChild(lastHeading2);
+        let lastList2 = document.createElement("ul");
+        for(let l = 0; l <= 24; l++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = "Final Number: " + l;
+            lastList2.appendChild(listItem);
+        }
+       
+    </script>
+
+
+</body>
+
+</html>
