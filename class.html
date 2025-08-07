@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>Classes in Javascript</h1>
+    <div>
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <script>
+        class Student {
+            constructor(name, birthYear, grade) {
+                this.name = name;
+                this.birthYear = birthYear;
+                this.grade = grade;
+            }
+            calculateAge() {
+                let date = new Date();
+                let currentYear = date.getFullYear();
+                return currentYear - this.birthYear;
+            }
+
+        }
+        let student1 = new Student("John", 2006, "Class XI");
+        let student2 = new Student("Jane", 2005, "Class XII");
+        document.getElementById("s1").innerHTML = "Student 1: " + student1.name + ", Age: " + student1.calculateAge() + ", Grade: " + student1.grade;
+        document.getElementById("s2").innerHTML = "Student 2: " + student2.name + ", Age: " + student2.calculateAge() + ", Grade: " + student2.grade;
+    </script>
+    </div>
+
+
+</body>
+
+</html>
