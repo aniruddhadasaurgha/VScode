@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>Map in Javascript</h1>
+    <p id="output"></p>
+    <script>
+        let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+        function multiply(num) {
+            return num * 24;
+        }
+        function add(num) {
+            return num + 24;
+        }
+        function subtract(num) {
+            return num - 24;
+        }
+        
+
+        let newNumbers = numbers.map(multiply);
+        document.getElementById("output").innerHTML = "Multiply: " + newNumbers + "<br>";
+        newNumbers = numbers.map(add);
+        document.getElementById("output").innerHTML += "Add: " + newNumbers + "<br>";
+        newNumbers = numbers.map(subtract);
+        document.getElementById("output").innerHTML += "Subtract: " + newNumbers + "<br>";
+        
+       document.write(eval("1+2*5-3/2"));
+        
+    </script>
+
+
+</body>
+
+</html>

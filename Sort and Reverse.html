@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>Sort and Reverse in Javascript</h1>
+    <button onclick="ascending()">Ascending</button>
+    <button onclick="descending()">Descending</button>
+    <button onclick="reverse()">Reverse</button>
+    <p id="output"></p>
+    <script>
+        let numbers = [5, 3, 8, 1, 2];
+        document.getElementById("output").innerHTML = numbers;
+       function ascending() {
+           numbers.sort(function(a, b) {
+               return a - b
+           });
+           document.getElementById("output").innerHTML = numbers;
+        }
+        function descending() {
+           numbers.sort(function(a, b) {
+               return b - a})
+              document.getElementById("output").innerHTML = numbers;    
+        }
+        function reverse() {
+           numbers.reverse();
+              document.getElementById("output").innerHTML = numbers;    
+        }
+    </script>
+
+
+</body>
+
+</html>
