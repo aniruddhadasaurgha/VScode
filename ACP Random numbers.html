@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: math, sans-serif;
+            margin: 20px;
+            padding: 5px;
+
+        }
+        h1 {
+            color: #33ccff;
+            font-size: 36px;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+
+        }
+        #text {
+            font-size: 15px;
+            color: #00ff00;
+            text-align: left;
+            margin: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+    <h1>Random Numbers</h1>
+    <p>This page generates 10 random numbers between 1 and 100 using a while loop.</p>
+        <p>Each number is generated using the formula: \[ \text{result} = \text{Math.floor(Math.random() * 100) + 1} \]</p>
+        <code>result = Math.floor(Math.random() * 100) + 1;</code><br>
+        <p>Where:</p>
+        <p><strong>Math.random()</strong> generates a random number between 0 (inclusive) and 1 (exclusive).</p>
+        <p><strong>Math.floor()</strong> rounds down to the nearest whole number.</p>
+        <p>The result is then adjusted to fit within the desired range of 1 to 100.</p>
+        The random numbers generated will be displayed below:
+        <br>
+    <p id ="text"></p>
+    </div>
+
+    <div class="random-numbers">
+
+    <script>
+      let i = 0;
+        let text = "";
+        while(i < 10){
+            result = Math.floor(Math.random() * 100) + 1; 
+            i ++;
+            text += "Random number " + i + ": " + result + "<br>";
+
+        }
+        document.getElementById("text").innerHTML = text + "<br>";
+    </script>
+    
+    </div>
+    
+
+
+
+</body>
+
+</html>
