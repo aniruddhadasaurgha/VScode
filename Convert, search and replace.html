@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <script>
+         let x = 10;
+         document.write("The value of x is: " + x + "<br>");
+         document.write("The data type of x is: " + typeof(x) + "<br>");
+         x = toString(x);
+         
+         document.write("The data type of x after conversion is: " + typeof(x) + "<br>");
+         
+
+            let a = 10;
+            document.write("The value of a is: " + a + "<br>");
+            document.write("The data type of a is: " + typeof(a) + "<br>");
+            a = String(a);
+            document.write("The data type of a after conversion is: " + typeof(a) + "<br>");
+            document.write("The value of a after conversion is: " + a + "<br>");
+         let y = "20";
+            document.write("The data type of y is: " + typeof(y) + "<br>");
+            y = parseFloat(y);
+            document.write("The data type of y after conversion is: " + typeof(y) + "<br>");
+            let z = "30.5";
+            document.write("The data type of z is: " + typeof(z) + "<br>");
+            z = parseInt(z);
+            document.write("The data type of z after conversion is: " + typeof(z) + "<br>");
+
+            let text = "Hello World";
+            document.write("The text is: " + text + "<br>");
+            document.write(text.search("World") + "<br>");
+            document.write(text.includes("World", "JavaScript") + "<br>");
+            document.write(text.replace("World", "JavaScript") + "<br>");
+            document.write(text.replaceAll("World", "JavaScript") + "<br>");
+            document.write(text.toUpperCase() + "<br>");
+    </script>
+
+
+</body>
+
+</html>

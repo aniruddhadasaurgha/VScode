@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling in Javascript</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>Error Handling in Javascript</h1>
+    <p id="error_message"></p>
+    <p id="function_message"></p>
+    <script>
+       
+      add = (x,y) => x+y;
+      document.getElementById("function_message").innerHTML = "The sum of 10 and 20 is: " + add(10,20);
+      subtract = (x,y) => x-y;
+      document.getElementById("function_message").innerHTML += "<br>The difference of 20 and 10 is: " + subtract(20,10);
+      multiply = (x,y) => x*y;
+      document.getElementById("function_message").innerHTML += "<br>The product of 10 and 20 is: " + multiply(10,20);
+      divide =(x,y) => x/y;
+      document.getElementById("function_message").innerHTML += "<br>The quotient of 20 and 10 is: " + divide(20,10);
+
+      try{
+        text("Hello World");
+        
+        
+
+      }
+      catch(err){
+        document.getElementById("error_message").innerHTML = "Error: " + err.message;
+      }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
