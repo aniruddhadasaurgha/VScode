@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes in Javascript</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <style>
+        body {
+            font-family: math, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container-fluid {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Classes in Javascript</h1>
+    <p id="details"></p>
+    <div class="container-fluid">
+    </div>
+    <script>
+    class Aircraft {
+    constructor(manufacturer, model, year) {
+    this.manufacturer = manufacturer;
+    this.model = model;
+    this.year = year;
+    }
+    display() {
+    return "Aircraft: " + this.manufacturer + " " + this.model + ", Year: " + this.year;
+    }
+    show() {
+    return this.display();
+    }
+    }
+    
+    class TypeAircraft extends Aircraft {
+    constructor(manufacturer, model, year, type) {
+    super(manufacturer, model, year);
+    this.type = type;
+    }
+    display() {
+    return super.display() + ", Type: " + this.type;
+    }
+    show() {
+    return this.display();
+    }
+    }
+    
+    let aircraft1 = new Aircraft("Boeing", "737", 2015);
+    let aircraft2 = new TypeAircraft("Airbus", "A320", 2018, "Commercial");
+    document.getElementById("details").innerHTML = aircraft1.show() + "<br>" + aircraft2.show() + "<br>" + aircraft2.show();
+    
+    </script>
+    <script>
+    let aircraft3 = new TypeAircraft("Cessna", "172", 2020, "Private");
+    let aircraft4 = new TypeAircraft("Lockheed Martin", "F-22 Raptor", 2012, "Military");
+    let aircraft5 = new TypeAircraft("Bombardier", "Global 7500", 2021, "Business Jet");
+    let aircraft6 = new TypeAircraft("Embraer", "E190", 2019, "Regional");
+    document.getElementById("details").innerHTML += "<br>" + aircraft3.show();
+    document.getElementById("details").innerHTML += "<br>" + aircraft4.show();
+    document.getElementById("details").innerHTML += "<br>" + aircraft5.show();
+    document.getElementById("details").innerHTML += "<br>" + aircraft6.show();
+    </script>
+
+</body>
+
+</html>
