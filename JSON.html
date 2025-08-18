@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON (Javascript Object Notation)</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>JSON Data</h1>
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+        let aircraft = {
+            "name": "Boeing 747",
+            "type": "Commercial Airliner",
+            "capacity": 660,
+            "range": 8000
+        };
+        
+
+
+        let aircraftJSON = JSON.stringify(aircraft);
+        document.getElementById("output1").innerHTML = "Aircraft JSON: " + aircraftJSON;
+
+        let aircraftdata = JSON.parse(aircraftJSON);
+        document.getElementById("output2").innerHTML = "Aircraft Name: " + aircraftdata.name + 
+            ", Type: " + aircraftdata.type + 
+            ", Capacity: " + aircraftdata.capacity + 
+            ", Range: " + aircraftdata.range + " miles";
+        
+    </script>
+
+
+</body>
+
+</html>

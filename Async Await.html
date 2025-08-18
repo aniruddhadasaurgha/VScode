@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronise Await</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>User Data Fetcher</h1>
+   <button id="fetchdata" onclick="fetchUserData(8,3)">Fetch User Data</button>
+   <div id="userData">
+    <script>
+        async function fetchUserData(x,y) {
+            let response = await x*y;
+            displayUserData(response);
+        }
+
+        function displayUserData(text) {
+            let userDataDiv = document.getElementById("userData");
+            userDataDiv.innerHTML = text;
+        }
+
+    </script>
+
+
+    </div>
+</body>
+
+</html>
