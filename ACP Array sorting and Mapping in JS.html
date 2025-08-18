@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array sorting and Mapping in Javascript</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <style>
+        body {
+            font-family: math, sans-serif;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #f8f9fa;
+        }
+        button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+        p {
+            font-size: 1.2em;
+            color: #f8f9fa;
+            background-color: #343a40;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Array sorting and mapping in JavaScript</h1>
+   <div id="Multiply">
+        <h2>Multiply Array</h2>
+        <button onclick="multiply()">Multiply by 2</button>
+        <button onclick="ascending()">Ascending</button>
+        <button onclick="descending()">Descending</button>
+        <button onclick="reverse()">Reverse</button>
+        <p id="output"></p>
+    </div>
+    <div id="Add">
+        <h2>Add Array</h2>
+        <button onclick="add()">Add 10</button>
+        <button onclick="addAscending()">Ascending</button>
+        <button onclick="addDescending()">Descending</button>
+        <button onclick="addReverse()">Reverse</button>
+        <p id="addOutput"></p>
+    </div>
+    <div id="Subtract">
+        <h2>Subtract Array</h2>
+        <button onclick="subtract()">Subtract 1</button>
+        <button onclick="subtractAscending()">Ascending</button>
+        <button onclick="subtractDescending()">Descending</button>
+        <button onclick="subtractReverse()">Reverse</button>
+        <p id="subtractOutput"></p>
+    </div>
+    <script>
+        // Multiply section
+        let numbers = [1, 2, 3, 4, 5];
+        let currentNumbers = [...numbers];
+        document.getElementById("output").innerHTML = currentNumbers;
+
+        function multiply() {
+            currentNumbers = numbers.map(function(num) {
+                return num * 2;
+            });
+            document.getElementById("output").innerHTML = currentNumbers;
+        }
+        function ascending() {
+            currentNumbers.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("output").innerHTML = currentNumbers;
+        }
+        function descending() {
+            currentNumbers.sort(function(a, b) {
+                return b - a;
+            });
+            document.getElementById("output").innerHTML = currentNumbers;
+        }
+        function reverse() {
+            currentNumbers.reverse();
+            document.getElementById("output").innerHTML = currentNumbers;
+        }
+
+        // Add section
+        let addNumbers = [1, 2, 3, 4, 5];
+        let currentAddNumbers = [...addNumbers];
+        document.getElementById("addOutput").innerHTML = currentAddNumbers;
+
+        function add() {
+            currentAddNumbers = addNumbers.map(function(num) {
+                return num + 10;
+            });
+            document.getElementById("addOutput").innerHTML = currentAddNumbers;
+        }
+        function addAscending() {
+            currentAddNumbers.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("addOutput").innerHTML = currentAddNumbers;
+        }
+        function addDescending() {
+            currentAddNumbers.sort(function(a, b) {
+                return b - a;
+            });
+            document.getElementById("addOutput").innerHTML = currentAddNumbers;
+        }
+        function addReverse() {
+            currentAddNumbers.reverse();
+            document.getElementById("addOutput").innerHTML = currentAddNumbers;
+        }
+
+        // Subtract section
+        let subtractNumbers = [10, 20, 30, 40, 50];
+        let currentSubtractNumbers = [...subtractNumbers];
+        document.getElementById("subtractOutput").innerHTML = currentSubtractNumbers;
+
+        function subtract() {
+            currentSubtractNumbers = subtractNumbers.map(function(num) {
+                return num - 1;
+            });
+            document.getElementById("subtractOutput").innerHTML = currentSubtractNumbers;
+        }
+        function subtractAscending() {
+            currentSubtractNumbers.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("subtractOutput").innerHTML = currentSubtractNumbers;
+        }
+        function subtractDescending() {
+            currentSubtractNumbers.sort(function(a, b) {
+                return b - a;
+            });
+            document.getElementById("subtractOutput").innerHTML = currentSubtractNumbers;
+        }
+        function subtractReverse() {
+            currentSubtractNumbers.reverse();
+            document.getElementById("subtractOutput").innerHTML = currentSubtractNumbers;
+        }
+    </script>
+</body>
+
+</html>  
