@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+          
+            background-color: black;
+            color: white;
+            margin: 24px;
+            border: 5px solid #ffffff;
+            
+
+        }
+        h1 {
+            font-family: math,sans-serif;
+            color: #33ccff;
+            box-shadow: 2px 1px 2px #252525;
+            font-weight: bold;
+            text-align: center;
+            
+        }
+        h4 {
+            font-family: math,sans-serif;
+            color: #66ff66;
+            text-align: left;
+        }
+        p {
+            font-size: 24px;
+            line-height: 1.5;
+            color: #ffffff;
+            text-underline-offset: 0.2em;
+        }
+        mark {
+            background-color: #e43d5e;
+            color: white;
+            padding: 0.2em;
+            border-radius: 0.2em;
+        }
+        #error_message1, #error_message2 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 3;
+            font-size: 20px;
+            color: #00ff00;
+            text-align: center;
+            text-shadow: 0 0 8px #00ff00, 0 0 2px #fff;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #33ccff;
+            background-color: #2725255b;
+        }
+        code {
+            font-family: monospace;
+            background-color: #2725255b;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin-top: 20px;
+            
+            border: 1px solid #33ccff;
+            text-align: end
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Handling Errors in JavaScript</h1>
+    <h4>
+        Demonstrating Error Handling with Try-Catch Blocks
+    </h4>
+    <h4>
+        This page demonstrates how to handle errors in JavaScript using try-catch blocks. It includes examples of both syntax and runtime errors, and how to catch them gracefully. 
+    </h4>
+    <code>
+        <!-- Example code for display only, not for execution -->
+        try {
+            let text = Codingal;
+        }
+        catch (err) {
+            document.getElementById("error_message1").innerHTML = "Error: " +  + err.message ;
+        }
+
+        try {
+            let str = jhdbwdh;
+        }
+        catch (err) {
+            document.getElementById("error_message2").innerHTML = "Error: "  + err.message ;
+        }
+    </code>
+    <div id="error_message1"></div>
+    <div id="error_message2"></div>
+    <script>
+        try {
+           
+            let text = Codingal;
+        }
+        catch (err) {
+            document.getElementById("error_message1").innerHTML = "ERROR : " + "<mark>" + err.message + "</mark>";
+        }
+    
+        try {
+            
+            let str = jhdbwdh;
+        }
+        catch (err) {
+            document.getElementById("error_message2").innerHTML = "ERROR : " + "<mark>" + err.message + "</mark>";
+        }
+    </script>
+
+
+</body>
+
+</html>
