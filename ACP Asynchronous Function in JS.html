@@ -7,21 +7,66 @@
     <title>Asyncronous Function in Javascript</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <style>
+        body{
+            font-family: math, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            border: 3px solid white;
+            text-align: center;
+        }
+        h1 {
+            font-weight: bold;
+            color:rgb(8, 206, 241);
+            box-shadow: #333;
+
+        }
+        button{
+            text-align: center;
+            background-color: darkgreen;
+            color: greenyellow;
+        }
+      
+        button:hover {
+            color:aqua;
+            background-color: navy;
+        }
+        div#fetchuserdata{
+            background-color: #333;
+            
+        }
+        p#result1{
+         font-size: 24px;
+         color: orange;
+         
+        }
+        p#result2{
+         font-size: 24px;
+         color: orange;
+        }
+        p#result3{
+         font-size: 24px;
+         color: orange
+        }
+
+    </style>
 </head>
 
 <body>
     <h1>Asyncronous Function in Javascript</h1>
+    <div id ="fetchuserdata">
     <button id="fetchdata1" onclick="fetchUserData1(8,3)">Fetch User Data</button>
-    <button id="fetchdata2" onclick="fetchUserData2(8,3)">Fetch User Data</button>
-    <button id="fetchdata3" onclick="fetchUserData3(8,3)">Fetch User Data</button>
     <p id="result1"></p>
+    <button id="fetchdata2" onclick="fetchUserData2(8,3)">Fetch User Data</button>
     <p id="result2"></p>
+    <button id="fetchdata3" onclick="fetchUserData3(8,3)">Fetch User Data</button>
     <p id="result3"></p>
-
+    
     <script>
         async function fetchUserData1(a, b) {
-                let response = await x * y;
-                displayUserData(response);
+                let response = await a * b;
+                displayUserData1(response);
             }
 
             function displayUserData1(text) {
@@ -29,17 +74,17 @@
                 userDataDiv.innerHTML = "Result is:" + text + "<br>";
             }
              async function fetchUserData2(a, b) {
-                    let response = await a * b;
-                    displayUserData(response);
+                    let response = await a + b;
+                    displayUserData2(response);
                 }
 
-                function displayUserDat2(text) {
+                function displayUserData2(text) {
                     let userDataDiv = document.getElementById("result2");
                     userDataDiv.innerHTML = "Result is:" + text + "<br>";
                 }
                  async function fetchUserData3(a, b) {
-                        let response = await a * b;
-                        displayUserData(response);
+                        let response = await a - b;
+                        displayUserData3(response);
                     }
 
                     function displayUserData3(text) {
@@ -47,14 +92,8 @@
                         userDataDiv.innerHTML = "Result is:" + text + "<br>";
                     }
                 
-
-            
-
-    
-
-
     </script>
-
+    </div>
 
 </body>
 
