@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation in Javascript</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <style>
+        body{
+            font-family: math,sans-serif;
+            background-color: black;
+            border: 2px solid rgb(0, 255, 76) ;
+            padding:50px;
+            margin: 10px;
+            padding-bottom: 200px;
+            
+        }
+        h3{
+            text-align: center;
+            color: aquamarine;
+        
+        }
+        form{
+            color:white;
+        }
+        #submit{
+            background-color:rgb(1, 7, 96);
+            color:rgb(7, 212, 219)
+
+        }
+         #submit:hover{
+            color:rgb(5, 240, 5);
+            background-color: darkgreen;
+
+
+         }        
+    </style>
+</head>
+
+<body>
+    <h3>Form</h3>
+    <div id="form">
+    <form id="ageValidationForm">
+        Name :<input type="text" name="fullname" placeholder="Please enter your name" required>
+        <br><br>
+        Age :<input type="text" name="age" placeholder="Please enter your age" required>
+        <br><br>
+        <input id="submit" type="submit" value="submit">
+    </form>
+    </div>
+
+<p id="warningMessage" class="text-danger"></p>
+
+<script>
+    document.getElementById("ageValidationForm").onsubmit = function(event) {
+        let age = document.forms["ageValidationForm"]["age"].value;
+        if (age === "") {
+            document.getElementById("warningMessage").innerHTML = "Age must be filled out";
+            return false;
+        }
+        if (parseInt(age) < 18) {
+            document.getElementById("warningMessage").innerHTML = "You must be at least 18 years old";
+            return false;
+            
+        }
+        document.getElementById("warningMessage").innerHTML = "";
+        return true;
+        
+        
+        
+        
+        
+    }
+</script>
+
+</body>
+
+</html>
