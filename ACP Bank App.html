@@ -10,141 +10,39 @@
 </head>
 
 <body>
-    <h1 class="text-center my-4">Bank Account Management</h1>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Create Account</h3>
-                <form id="createAccountForm">
-                    <div class="form-group">
-                        <label for="accountHolder">Account Holder Name</label>
-                        <input type="text" class="form-control" id="accountHolder" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="initialDeposit">Initial Deposit</label>
-                        <input type="number" class="form-control" id="initialDeposit" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Create Account</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <h3>Account Actions</h3>
-                <form id="accountActionsForm">
-                    <div class="form-group
-">
-                        <label for="accountSelect">Select Account</label>
-                        <select class="form-control" id="accountSelect" required></select>
-                    </div>
-                    <div class="form-group">
-                        <label for="transactionAmount">Amount</label>
-                        <input type="number" class="form-control" id="transactionAmount" required>
-                    </div>
-                    <button type="button" class="btn btn-success" id="depositBtn">Deposit
-                    </button>
-                    <button type="button" class="btn btn-danger" id="withdrawBtn">Withdraw
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12">
-                <h3>Account Summary</h3>
-                <table class="table table-bordered" id="accountSummaryTable">
-                    <thead>
-                        <tr>
-                            <th>Account Holder</th>
-                            <th>Balance</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <script>
-        class BankAccount {
-            constructor(accountHolder, initialDeposit) {
-                this.accountHolder = accountHolder;
-                this.balance = initialDeposit;
-            }
+    <header class="bg-primary text-white text-center py-3">
+        <nav>
+            <span>CloudCash</span>
+            <a href="#" class="text-white ml-3">Home</a>
+            <a href="#" class="text-white ml-3">About</a>
+            <a href="#" class="text-white ml-3">Services</a>
+            <a href="#" class="text-white ml-3">Contact</a>
 
-            deposit(amount) {
-                this.balance += amount;
-            }
+        </nav>
+        <h1>Welcome to CloudCash</h1>
+    </header>
+    <section class="container-fluid">
+        <content>
+            <p></p>
+            <input type="float" id="deposit" placeholder="deposit">Deposit</input>
+            <input type="float" id="withdraw" placeholder="withdraw">Withdraw</input>
+            <button onclick="myFunction()">Submit</button>
+            <p id="demo"></p>
+            <script>
+                function myFunction() {
+                    let deposit = parseFloat(document.getElementById("deposit").value) || 0;
+                    let withdraw = parseFloat(document.getElementById("withdraw").value) || 0;
+                    let balance = 0;
 
-            withdraw(amount) {
-                if (amount <= this.balance) {
-                    this.balance -= amount;
-                } else {
-                    alert("Insufficient funds");
+                    balance += deposit;
+                    balance -= withdraw;
+
+                    document.getElementById("demo").innerHTML = "Your current balance is: $" + balance.toFixed(2);
                 }
-            }
-        }
+            </script>
+        </content>
+    </section>
 
-        const accounts = [];
-
-        function updateAccountSelect() {
-            const accountSelect = document.getElementById('accountSelect');
-            accountSelect.innerHTML = '';
-            accounts.forEach((account, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.textContent = account.accountHolder;
-                accountSelect.appendChild(option);
-            });
-        }
-
-        function updateAccountSummary() {
-            const tbody = document.querySelector('#accountSummaryTable tbody');
-            tbody.innerHTML = '';
-            accounts.forEach(account => {
-                const row = document.createElement('tr');
-                const holderCell = document.createElement('td');
-                holderCell.textContent = account.accountHolder;
-                const balanceCell = document.createElement('td');
-                balanceCell.textContent = `$${account.balance.toFixed(2)}`;
-                row.appendChild(holderCell);
-                row.appendChild(balanceCell);
-                tbody.appendChild(row);
-            });
-        }
-
-        document.getElementById('createAccountForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const accountHolder = document.getElementById('accountHolder').value;
-            const initialDeposit = parseFloat(document.getElementById('initialDeposit').value);
-            const newAccount = new BankAccount(accountHolder, initialDeposit);
-            accounts.push(newAccount);
-            updateAccountSelect();
-            updateAccountSummary();
-            this.reset();
-        });
-
-        document.getElementById('depositBtn').addEventListener('click', function () {
-            const accountIndex = document.getElementById('accountSelect').value;
-            const amount = parseFloat(document.getElementById('transactionAmount').value);
-            if (accountIndex !== '' && amount > 0) {
-                accounts[accountIndex].deposit(amount);
-                updateAccountSummary();
-                document.getElementById('transactionAmount').value = '';
-            }
-        });
-
-        document.getElementById('withdrawBtn').addEventListener('click', function () {
-            const accountIndex = document.getElementById('accountSelect').value;
-            const amount = parseFloat(document.getElementById('transactionAmount').value);
-            if (accountIndex !== '' && amount > 0) {
-                accounts[accountIndex].withdraw(amount);
-                updateAccountSummary();
-                document.getElementById('transactionAmount').value = '';
-            }
-        });
-
-        
-
-    </script>
-
-
-</body>
+    </body>
 
 </html>
