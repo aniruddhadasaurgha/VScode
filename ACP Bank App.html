@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank App</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </head>
 
 <body>
@@ -17,32 +16,69 @@
             <a href="#" class="text-white ml-3">About</a>
             <a href="#" class="text-white ml-3">Services</a>
             <a href="#" class="text-white ml-3">Contact</a>
-
         </nav>
         <h1>Welcome to CloudCash</h1>
     </header>
-    <section class="container-fluid">
-        <content>
-            <p></p>
-            <input type="float" id="deposit" placeholder="deposit">Deposit</input>
-            <input type="float" id="withdraw" placeholder="withdraw">Withdraw</input>
-            <button onclick="myFunction()">Submit</button>
-            <p id="demo"></p>
-            <script>
-                function myFunction() {
-                    let deposit = parseFloat(document.getElementById("deposit").value) || 0;
-                    let withdraw = parseFloat(document.getElementById("withdraw").value) || 0;
-                    let balance = 0;
 
-                    balance += deposit;
-                    balance -= withdraw;
+    <section class="container my-4">
+        <h2>Simple Bank Application</h2>
+        <input type="number" id="amount" class="form-control mb-3" placeholder="Enter amount">
 
-                    document.getElementById("demo").innerHTML = "Your current balance is: $" + balance.toFixed(2);
-                }
-            </script>
-        </content>
+        <p id="message" class="font-weight-bold"></p>
+
+        <button class="btn btn-success mr-2" onclick="deposit()">Deposit</button>
+        <button class="btn btn-danger" onclick="withdraw()">Withdraw</button>
+
+        <div class="mt-4">
+            <output>Your Balance: $<span id="balance">0.00</span></output>
+        </div>
     </section>
 
-    </body>
+    <script>
+        let balance = 0;
+
+        function deposit() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const messageEl = document.getElementById('message');
+
+            if (isNaN(amount) || amount <= 0) {
+                messageEl.textContent = "❌ Please enter a valid amount to deposit.";
+                messageEl.className = "text-danger";
+                return;
+            }
+
+            balance += amount;
+            document.getElementById('balance').innerText = balance.toFixed(2);
+            messageEl.textContent = "✅ Successfully deposited $" + amount.toFixed(2);
+            messageEl.className = "text-success";
+            document.getElementById('amount').value = "";
+        }
+
+        function withdraw() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const messageEl = document.getElementById('message');
+
+            if (isNaN(amount) || amount <= 0) {
+                messageEl.textContent = "❌ Please enter a valid amount to withdraw.";
+                messageEl.className = "text-danger";
+                return;
+            }
+
+            if (amount > balance) {
+                messageEl.textContent = "⚠️ Insufficient balance!";
+                messageEl.className = "text-warning";
+                return;
+            }
+
+            balance -= amount;
+            document.getElementById('balance').innerText = balance.toFixed(2);
+            messageEl.textContent = "✅ Successfully withdrew $" + amount.toFixed(2);
+            messageEl.className = "text-success";
+            document.getElementById('amount').value = "";
+        }
+    </script>
+</body>
 
 </html>
+
+
