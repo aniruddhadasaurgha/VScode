@@ -1,0 +1,12 @@
+first_name = str(input("Enter your first name: "))
+last_name = str(input("Enter your last name: "))
+age = int(input("Enter your age: "))
+height = float(input("Enter your height in meters: "))
+favourite_subject = str(input("Enter your favourite subject: "))
+
+personal_info = (first_name, last_name, age, height, favourite_subject)
+print("Your personal details stored in a tuple:", personal_info)
+print("Current Data type of personal_info:", type(personal_info))
+personal_info_list = list(personal_info)
+print("Your personal details converted to a list:", personal_info_list)
+print("Current Data type of personal_info_list:", type(personal_info_list))
