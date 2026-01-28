@@ -1,65 +1,67 @@
--- Create STUDENT table
 
-CREATE TABLE IF NOT EXISTS STUDENT (
+CREATE DATABASE Student_Grouping_Project;
+USE Student_Grouping_Project;
 
-ROLL_NO TEXT PRIMARY KEY,
 
-NAME TEXT NOT NULL,
-
-ADDRESS TEXT,
-
-PHONE TEXT,
-
-AGE INTEGER
-
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(50),
+    Class VARCHAR(10),
+    Subject VARCHAR(20),
+    Marks INT,
+    Gender VARCHAR(10)
 );
 
--- Insert sample data into the STUDENT table
+INSERT INTO Students VALUES
+(1, 'Arjun', '10A', 'Math', 85, 'Male'),
+(2, 'Riya', '10A', 'Math', 92, 'Female'),
+(3, 'Kabir', '10A', 'Science', 78, 'Male'),
+(4, 'Ananya', '10B', 'Math', 88, 'Female'),
+(5, 'Rahul', '10B', 'Science', 67, 'Male'),
+(6, 'Sneha', '10B', 'Science', 91, 'Female'),
+(7, 'Aman', '10C', 'Math', 73, 'Male'),
+(8, 'Pooja', '10C', 'Science', 84, 'Female'),
+(9, 'Rohit', '10C', 'Math', 95, 'Male'),
+(10, 'Neha', '10A', 'Science', 89, 'Female');
 
-INSERT INTO STUDENT (ROLL_NO, NAME, ADDRESS, PHONE, AGE) VALUES
+SELECT Class, COUNT(*) AS Total_Students
+FROM Students
+GROUP BY Class;
 
-('1', 'RAM', 'DELHI', '*****', 18),
 
-('2', 'RAMESH', 'GURGAON', '*****', 18),
+SELECT Subject, AVG(Marks) AS Average_Marks
+FROM Students
+GROUP BY Subject;
 
-('3', 'SUJIT', 'ROHTAK', '*****', 20),
 
-('4', 'SURESH', 'DELHI', '*****', 18),
+SELECT Class, MAX(Marks) AS Highest_Marks
+FROM Students
+GROUP BY Class;
 
-('5', 'AMAN', 'ROHTAK', '*****', 20),
 
-('6', 'HARSH', 'GURGAON', '*****', 18);
+SELECT Class, AVG(Marks) AS Avg_Marks
+FROM Students
+GROUP BY Class
+HAVING AVG(Marks) > 80;
 
--- Select all records from the STUDENT table
+SELECT Gender, COUNT(*) AS Total_Students
+FROM Students
+GROUP BY Gender;
 
-SELECT * FROM STUDENT;
 
--- Query students who are 18 years old and live in Delhi
+SELECT Subject, SUM(Marks) AS Total_Marks
+FROM Students
+WHERE Subject = 'Science'
+GROUP BY Subject;
 
-SELECT * FROM STUDENT
 
-WHERE AGE = 18 AND ADDRESS = 'DELHI';
+SELECT Class, COUNT(*) AS Student_Count
+FROM Students
+GROUP BY Class
+HAVING COUNT(*) > 3;
 
--- Query students who are 18 years old and named RAM
 
-SELECT * FROM STUDENT
-
-WHERE AGE = 18 AND NAME = 'RAM';
-
--- Query students named RAM or SUJIT
-
-SELECT * FROM STUDENT
-
-WHERE NAME = 'RAM' OR NAME = 'SUJIT';
-
--- Query students named RAM or aged 20
-
-SELECT * FROM STUDENT
-
-WHERE NAME = 'RAM' OR AGE = 20;
-
--- Query students aged 18 and named RAM or RAMESH
-
-SELECT * FROM STUDENT
-
-WHERE AGE = 18 AND (NAME = 'RAM' OR NAME = 'RAMESH');
+SELECT Subject, AVG(Marks) AS Avg_Marks
+FROM Students
+WHERE Gender = 'Female'
+GROUP BY Subject;
