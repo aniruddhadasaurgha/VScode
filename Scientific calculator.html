@@ -1,0 +1,72 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { evaluate, pi, e, sqrt, sin, cos, tan, log, factorial } from "mathjs";
+
+export default function ScientificCalculator() {
+const [input, setInput] = useState("");
+const [ans, setAns] = useState(0);
+
+const handleClick = (value) => {
+try {
+let newInput = input;
+if (value === "AC") {
+setInput("");
+return;
+} else if (value === "DEL") {
+setInput(input.slice(0, -1));
+return;
+} else if (value === "ANS") {
+newInput += ans;
+} else if (value === "=") {
+let expr = input.replace(/÷/g, '/').replace(/×/g, '*').replace(/√/g, 'sqrt');
+let result = evaluate(expr);
+setInput(String(result));
+setAns(result);
+return;
+} else if (value === "π") {
+newInput += String(pi);
+} else if (value === "e") {
+newInput += String(e);
+} else if (value === "n!") {
+newInput += "!";
+} else {
+newInput += value;
+}
+setInput(newInput);
+} catch {
+setInput("Error");
+}
+};
+
+const buttons = [
+["AC", "DEL", "(", ")", "÷"],
+["7", "8", "9", "×", "sin("],
+["4", "5", "6", "-", "cos("],
+["1", "2", "3", "+", "tan("],
+["0", ".", "^", "√", "="],
+["log(", "ln(", "π", "e", "%"],
+["n!", "ANS"]
+];
+
+return (
+<div className="flex items-center justify-center min-h-screen bg-gray-200">
+    <motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }}>
+        <div className="w-[360px] p-4 rounded-2xl shadow-2xl bg-gray-800 text-white">
+            <div className="text-center text-xl font-bold mb-2 tracking-wider">
+                fx-100MS Emulator
+            </div>
+            <div className="bg-black text-green-400 text-right p-3 rounded-xl text-lg mb-4 min-h-[50px] break-words">
+                {input || "0"}
+            </div>
+            <div className="grid grid-cols-5 gap-2">
+                
+                    >
+                    {btn}
+                </button>
+                ))}
+            </div>
+        </div>
+    </motion.div>
+</div>
+);
+'}'
